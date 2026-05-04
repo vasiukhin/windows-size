@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Размер окна</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: monospace;
+      background: #0f0f0f;
+      color: #e0e0e0;
+    }
+    #size {
+      font-size: 4rem;
+      letter-spacing: 0.05em;
+    }
+    span { color: #888; font-size: 2rem; }
+  </style>
+</head>
+<body>
+  <div id="size"></div>
+  <script>
+    function update() {
+      document.getElementById('size').innerHTML =
+        window.innerWidth + '<span> × </span>' + window.innerHeight;
+    }
+    update();
+    window.addEventListener('resize', update);
+  </script>
+</body>
+</html>
